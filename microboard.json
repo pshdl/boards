@@ -1,0 +1,305 @@
+{
+  "category" : "Board",
+  "version" : "0.1",
+  "boardName" : "Avnet Spartan-6 LX9 MicroBoard",
+  "description" : "The low-cost Spartan-6 FPGA LX9 MicroBoard is the perfect solution for designers interested in exploring the MicroBlaze soft processor or Spartan-6 FPGAs in general. The kit comes with several pre-built MicroBlaze “systems” allowing users to start software development just like any standard off-the-shelf microprocessor. The included Software Development Kit (SDK) provides a familiar Eclipse-based environment for writing and debugging code. Experienced FPGA users will find the MicroBoard a valuable tool for general purpose prototyping and testing. The included peripherals and expansion interfaces make the kit ideal for a wide variety of applications. From a system running an RTOS to a Linux-based web server, the Spartan-6 LX9 MicroBoard can help you validate your next design idea.",
+  "fpga" : {
+    "vendor" : "Xilinx",
+    "family" : "Spartan 6",
+    "partNumber" : "XC6SLX9-2CSG324C"
+  },
+  "pinGroups" : [ {
+    "name" : "Clock/Reset",
+    "description" : "Clock and reset signals",
+    "pins" : [ {
+      "description" : "40 MHz, USER_CLOCK can be used as external configuration clock",
+      "portName" : "user_clock",
+      "pinLocation" : "V10",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "timeSpec" : {
+        "time" : "40000",
+        "unit" : "KHz"
+      },
+      "assignedSignal" : "$clk"
+    }, {
+      "description" : "User Reset Push Button. Internal pull-down required since external resistor is not populated",
+      "portName" : "user_reset",
+      "pinLocation" : "V4",
+      "attributes" : {
+        "PULL" : "DOWN",
+        "TIG" : "#NO_VALUE",
+        "CLOCK_DEDICATED_ROUTE" : "false",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "assignedSignal" : "$rst",
+      "polarity" : "active_high"
+    }, {
+      "description" : "66.667 MHz",
+      "portName" : "clock_y2",
+      "pinLocation" : "K15",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "timeSpec" : {
+        "time" : "66666.7",
+        "unit" : "KHz"
+      }
+    }, {
+      "description" : "100 MHz",
+      "portName" : "clock_y3",
+      "pinLocation" : "C10",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "timeSpec" : {
+        "time" : "100000",
+        "unit" : "KHz"
+      }
+    }, {
+      "description" : "The following oscillator is not populated in production but the footprint is compatible with the Maxim DS1088LU",
+      "portName" : "backup_clock",
+      "pinLocation" : "R8",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    } ]
+  }, {
+    "name" : "GPIO Dips",
+    "description" : "User DIP Switch x4,Internal pull-down required since external resistor is not populated",
+    "pins" : [ {
+      "description" : "GPIO Dip switch 0",
+      "portName" : "gpio_dip[0]",
+      "pinLocation" : "B3",
+      "attributes" : {
+        "PULL" : "DOWN",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_high"
+    }, {
+      "description" : "GPIO Dip switch 1",
+      "portName" : "gpio_dip[1]",
+      "pinLocation" : "A3",
+      "attributes" : {
+        "PULL" : "DOWN",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_high"
+    }, {
+      "description" : "GPIO Dip switch 2",
+      "portName" : "gpio_dip[2]",
+      "pinLocation" : "B4",
+      "attributes" : {
+        "PULL" : "DOWN",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_high"
+    }, {
+      "description" : "GPIO Dip switch 3",
+      "portName" : "gpio_dip[3]",
+      "pinLocation" : "A4",
+      "attributes" : {
+        "PULL" : "DOWN",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_high"
+    } ]
+  }, {
+    "name" : "GPIO Dips",
+    "description" : "User LEDs",
+    "pins" : [ {
+      "description" : "GPIO LED 0",
+      "portName" : "gpio_led[0]",
+      "pinLocation" : "P4",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS18"
+      },
+      "polarity" : "active_low"
+    }, {
+      "description" : "GPIO LED 1",
+      "portName" : "gpio_led[1]",
+      "pinLocation" : "L6",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS18"
+      },
+      "polarity" : "active_low"
+    }, {
+      "description" : "GPIO LED 2",
+      "portName" : "gpio_led[2]",
+      "pinLocation" : "F5",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS18"
+      },
+      "polarity" : "active_low"
+    }, {
+      "description" : "GPIO LED 3",
+      "portName" : "gpio_led[3]",
+      "pinLocation" : "C2",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS18"
+      },
+      "polarity" : "active_low"
+    } ]
+  }, {
+    "name" : "UART",
+    "description" : "Silicon Labs CP2102 USB-to-UART Bridge Chip",
+    "pins" : [ {
+      "description" : "RXD, the receiver input on the FPGA, the serial output of the chip",
+      "portName" : "usb_rs232_rxd",
+      "pinLocation" : "R7",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "TXD, the sender output on the FPGA, the serial input of the chip",
+      "portName" : "usb_rs232_txd",
+      "pinLocation" : "T7",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    } ]
+  }, {
+    "name" : "I2C for CDE913",
+    "description" : "Texas Instruments CDCE913 programming port. Internal pull-ups required since external resistors are not populated",
+    "pins" : [ {
+      "description" : "SCL for I2C",
+      "portName" : "scl",
+      "pinLocation" : "P12",
+      "attributes" : {
+        "PULL" : "UP",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_low"
+    }, {
+      "description" : "SDA for I2C",
+      "portName" : "sda",
+      "pinLocation" : "U13",
+      "attributes" : {
+        "PULL" : "UP",
+        "IOSTANDARD" : "LVCMOS33"
+      },
+      "polarity" : "active_low"
+    } ]
+  }, {
+    "name" : "PMOD 1",
+    "description" : "Peripheral Modules and GPIO at connector J5. See https://www.digilentinc.com/PMODs",
+    "pins" : [ {
+      "description" : "Pin 1 of PMOD interface",
+      "portName" : "PMOD1_P1",
+      "pinLocation" : "F15",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 2 of PMOD interface",
+      "portName" : "PMOD1_P2",
+      "pinLocation" : "F16",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 3 of PMOD interface",
+      "portName" : "PMOD1_P3",
+      "pinLocation" : "C17",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 4 of PMOD interface",
+      "portName" : "PMOD1_P4",
+      "pinLocation" : "C18",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 7 of PMOD interface",
+      "portName" : "PMOD1_P7",
+      "pinLocation" : "F14",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 8 of PMOD interface",
+      "portName" : "PMOD1_P8",
+      "pinLocation" : "G14",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 9 of PMOD interface",
+      "portName" : "PMOD1_P9",
+      "pinLocation" : "D17",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 10 of PMOD interface",
+      "portName" : "PMOD1_P10",
+      "pinLocation" : "D18",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    } ]
+  }, {
+    "name" : "PMOD 2",
+    "description" : "Peripheral Modules and GPIO at connector J4. See https://www.digilentinc.com/PMODs",
+    "pins" : [ {
+      "description" : "Pin 1 of PMOD interface",
+      "portName" : "PMOD2_P1",
+      "pinLocation" : "H12",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 2 of PMOD interface",
+      "portName" : "PMOD2_P2",
+      "pinLocation" : "G13",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 3 of PMOD interface",
+      "portName" : "PMOD2_P3",
+      "pinLocation" : "E16",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 4 of PMOD interface",
+      "portName" : "PMOD2_P4",
+      "pinLocation" : "E18",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 7 of PMOD interface",
+      "portName" : "PMOD2_P7",
+      "pinLocation" : "K12",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 8 of PMOD interface",
+      "portName" : "PMOD2_P8",
+      "pinLocation" : "K13",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 9 of PMOD interface",
+      "portName" : "PMOD2_P9",
+      "pinLocation" : "F17",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    }, {
+      "description" : "Pin 10 of PMOD interface",
+      "portName" : "PMOD2_P10",
+      "pinLocation" : "F18",
+      "attributes" : {
+        "IOSTANDARD" : "LVCMOS33"
+      }
+    } ]
+  } ]
+}
