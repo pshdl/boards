@@ -22,7 +22,8 @@
         "time" : "40000",
         "unit" : "KHz"
       },
-      "assignedSignal" : "$clk"
+      "assignedSignal" : "$clk",
+      "direction" : "IN"
     }, {
       "description" : "User Reset Push Button. Internal pull-down required since external resistor is not populated",
       "portName" : "user_reset",
@@ -34,7 +35,8 @@
         "IOSTANDARD" : "LVCMOS33"
       },
       "assignedSignal" : "$rst",
-      "polarity" : "active_high"
+      "polarity" : "active_high",
+      "direction" : "IN"
     }, {
       "description" : "66.667 MHz",
       "portName" : "clock_y2",
@@ -45,7 +47,8 @@
       "timeSpec" : {
         "time" : "66666.7",
         "unit" : "KHz"
-      }
+      },
+      "direction" : "IN"
     }, {
       "description" : "100 MHz",
       "portName" : "clock_y3",
@@ -56,14 +59,16 @@
       "timeSpec" : {
         "time" : "100000",
         "unit" : "KHz"
-      }
+      },
+      "direction" : "IN"
     }, {
       "description" : "The following oscillator is not populated in production but the footprint is compatible with the Maxim DS1088LU",
       "portName" : "backup_clock",
       "pinLocation" : "R8",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "IN"
     } ]
   }, {
     "name" : "GPIO Dips",
@@ -76,7 +81,8 @@
         "PULL" : "DOWN",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_high"
+      "polarity" : "active_high",
+      "direction" : "IN"
     }, {
       "description" : "GPIO Dip switch 1",
       "portName" : "gpio_dip[1]",
@@ -85,7 +91,8 @@
         "PULL" : "DOWN",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_high"
+      "polarity" : "active_high",
+      "direction" : "IN"
     }, {
       "description" : "GPIO Dip switch 2",
       "portName" : "gpio_dip[2]",
@@ -94,7 +101,8 @@
         "PULL" : "DOWN",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_high"
+      "polarity" : "active_high",
+      "direction" : "IN"
     }, {
       "description" : "GPIO Dip switch 3",
       "portName" : "gpio_dip[3]",
@@ -103,7 +111,8 @@
         "PULL" : "DOWN",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_high"
+      "polarity" : "active_high",
+      "direction" : "IN"
     } ]
   }, {
     "name" : "GPIO Dips",
@@ -115,7 +124,8 @@
       "attributes" : {
         "IOSTANDARD" : "LVCMOS18"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "OUT"
     }, {
       "description" : "GPIO LED 1",
       "portName" : "gpio_led[1]",
@@ -123,7 +133,8 @@
       "attributes" : {
         "IOSTANDARD" : "LVCMOS18"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "OUT"
     }, {
       "description" : "GPIO LED 2",
       "portName" : "gpio_led[2]",
@@ -131,7 +142,8 @@
       "attributes" : {
         "IOSTANDARD" : "LVCMOS18"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "OUT"
     }, {
       "description" : "GPIO LED 3",
       "portName" : "gpio_led[3]",
@@ -139,7 +151,8 @@
       "attributes" : {
         "IOSTANDARD" : "LVCMOS18"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "OUT"
     } ]
   }, {
     "name" : "UART",
@@ -150,14 +163,16 @@
       "pinLocation" : "R7",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "IN"
     }, {
       "description" : "TXD, the sender output on the FPGA, the serial input of the chip",
       "portName" : "usb_rs232_txd",
       "pinLocation" : "T7",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "OUT"
     } ]
   }, {
     "name" : "I2C for CDE913",
@@ -170,7 +185,8 @@
         "PULL" : "UP",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "INOUT"
     }, {
       "description" : "SDA for I2C",
       "portName" : "sda",
@@ -179,7 +195,8 @@
         "PULL" : "UP",
         "IOSTANDARD" : "LVCMOS33"
       },
-      "polarity" : "active_low"
+      "polarity" : "active_low",
+      "direction" : "INOUT"
     } ]
   }, {
     "name" : "PMOD 1",
@@ -190,56 +207,64 @@
       "pinLocation" : "F15",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 2 of PMOD interface",
       "portName" : "PMOD1_P2",
       "pinLocation" : "F16",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 3 of PMOD interface",
       "portName" : "PMOD1_P3",
       "pinLocation" : "C17",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 4 of PMOD interface",
       "portName" : "PMOD1_P4",
       "pinLocation" : "C18",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 7 of PMOD interface",
       "portName" : "PMOD1_P7",
       "pinLocation" : "F14",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 8 of PMOD interface",
       "portName" : "PMOD1_P8",
       "pinLocation" : "G14",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 9 of PMOD interface",
       "portName" : "PMOD1_P9",
       "pinLocation" : "D17",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 10 of PMOD interface",
       "portName" : "PMOD1_P10",
       "pinLocation" : "D18",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     } ]
   }, {
     "name" : "PMOD 2",
@@ -250,56 +275,64 @@
       "pinLocation" : "H12",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 2 of PMOD interface",
       "portName" : "PMOD2_P2",
       "pinLocation" : "G13",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 3 of PMOD interface",
       "portName" : "PMOD2_P3",
       "pinLocation" : "E16",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 4 of PMOD interface",
       "portName" : "PMOD2_P4",
       "pinLocation" : "E18",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 7 of PMOD interface",
       "portName" : "PMOD2_P7",
       "pinLocation" : "K12",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 8 of PMOD interface",
       "portName" : "PMOD2_P8",
       "pinLocation" : "K13",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 9 of PMOD interface",
       "portName" : "PMOD2_P9",
       "pinLocation" : "F17",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     }, {
       "description" : "Pin 10 of PMOD interface",
       "portName" : "PMOD2_P10",
       "pinLocation" : "F18",
       "attributes" : {
         "IOSTANDARD" : "LVCMOS33"
-      }
+      },
+      "direction" : "INOUT"
     } ]
   } ]
 }
