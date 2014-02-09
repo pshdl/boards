@@ -1,4 +1,4 @@
-boards
+Boards
 ======
 
-Board definition files
+Here you can find all known board definition files
