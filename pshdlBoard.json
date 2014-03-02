@@ -17,7 +17,6 @@
       "pinLocation" : "97",
       "attributes" : {
         "iostd" : "LVTTL",
-        "INVERT" : "#NO_VALUE",
         "fixed" : "yes"
       },
       "timeSpec" : {
@@ -35,6 +34,7 @@
         "INVERT" : "#NO_VALUE",
         "fixed" : "yes"
       },
+      "assignedSignal" : "$rst",
       "polarity" : "active_low",
       "direction" : "IN"
     }, {
@@ -43,7 +43,6 @@
       "pinLocation" : "93",
       "attributes" : {
         "iostd" : "LVTTL",
-        "INVERT" : "#NO_VALUE",
         "fixed" : "yes"
       },
       "direction" : "IN"
@@ -53,10 +52,8 @@
       "pinLocation" : "98",
       "attributes" : {
         "iostd" : "LVTTL",
-        "INVERT" : "#NO_VALUE",
         "fixed" : "yes"
       },
-      "assignedSignal" : "$rst",
       "polarity" : "active_low",
       "direction" : "IN"
     }, {
@@ -65,7 +62,6 @@
       "pinLocation" : "23",
       "attributes" : {
         "iostd" : "LVTTL",
-        "INVERT" : "#NO_VALUE",
         "fixed" : "yes"
       },
       "polarity" : "active_low",
