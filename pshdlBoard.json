@@ -13,7 +13,7 @@
     "description" : "There are two push buttons directly attached to the FPGA",
     "pins" : [ {
       "description" : "This is the primary clock driven by PC4 of the Atmel",
-      "portName" : "clk",
+      "portName" : "Clock",
       "pinLocation" : "97",
       "attributes" : {
         "iostd" : "LVTTL",
@@ -25,6 +25,17 @@
         "unit" : "MHz"
       },
       "assignedSignal" : "$clk",
+      "direction" : "IN"
+    }, {
+      "description" : "This is the inverted button S1",
+      "portName" : "Reset",
+      "pinLocation" : "98",
+      "attributes" : {
+        "iostd" : "LVTTL",
+        "INVERT" : "#NO_VALUE",
+        "fixed" : "yes"
+      },
+      "polarity" : "active_low",
       "direction" : "IN"
     }, {
       "description" : "This is the DS1089L oszilator which is not populated by default",
