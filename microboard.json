@@ -6,7 +6,7 @@
   "fpga" : {
     "vendor" : "Xilinx",
     "family" : "Spartan 6",
-    "partNumber" : "XC6SLX9-2CSG324C"
+    "partNumber" : "XC6SLX9-CSG324-2"
   },
   "pinGroups" : [ {
     "name" : "Clock/Reset",
